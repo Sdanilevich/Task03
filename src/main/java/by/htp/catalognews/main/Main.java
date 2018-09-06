@@ -38,7 +38,7 @@ public class Main {
 
         OutputData.printCatalogNews(catalogFromXML);
 
-        HashMap<String, Object> parametersForFind = new HashMap<String, Object>();
+        /*HashMap<String, Object> parametersForFind = new HashMap<String, Object>();
         parametersForFind.put("providerName","tut.by");
         parametersForFind.put("country","Беларусь");
         Criteria criteriaFind = new Criteria();
@@ -46,7 +46,7 @@ public class Main {
         List<News> newsList = newsService.find(criteriaFind);
 
         OutputData.printCatalogNews("Найденные новости "+criteriaFind, newsList);
-
+*/
     }
 
     public static ClassPathXmlApplicationContext getContextSpring() {

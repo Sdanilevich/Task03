@@ -59,7 +59,7 @@ public class Util {
                 return Arrays.asList(criteriaValueString.split(","));
             }
         }
-        return Collections.singletonList("");
+        return Collections.emptyList();
     }
 
 

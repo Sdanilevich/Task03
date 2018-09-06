@@ -41,6 +41,7 @@ public class JaxbParser {
         try {
             JAXBContext context = JAXBContext.newInstance(CatalogNews.class);
             Marshaller m = context.createMarshaller();
+            m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             m.marshal(catalogNews, new FileOutputStream(Constant.getFullPathFileXML()));
 
         } catch (FileNotFoundException e) {System.out.println("error XML: " + e);}

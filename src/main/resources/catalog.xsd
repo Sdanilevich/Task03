@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://catalogNews/htp/by"
+        xmlns:tns="http://catalogNews/htp/by"
+        elementFormDefault="qualified">
+    <element name="catalog_news">
+        <complexType>
+            <sequence>
+                <element name="news"
+                         type="tns:news"
+                         minOccurs="1"
+                         maxOccurs="unbounded">
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="news">
+        <all>
+            <element name="date" type="string"/>
+            <element name="country" type="string"/>
+            <element name="name" type="string"/>
+            <element name="newsBody" type="string"/>
+            <element name="providerNews" type="tns:providerNews"/>
+        </all>
+        <attribute name="category" type="string" use="required"/>
+    </complexType>
+    <complexType name="providerNews">
+        <all>
+            <element name="name" type="string"/>
+            <element name="authors" type="tns:authors" minOccurs="0" maxOccurs="1"/>
+        </all>
+    </complexType>
+    <complexType name="authors">
+        <sequence>
+            <element name="author" type="string" minOccurs="1" maxOccurs="unbounded"/>
+        </sequence>
+     </complexType>
+
+ </schema>

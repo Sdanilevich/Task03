@@ -25,7 +25,7 @@ public class Criteria<E> {
         if (value!=null) {
             return criteria.get(criteriaName);
         }
-        else return  "";
+        else return  null;
     }
 
     public String toString() {
