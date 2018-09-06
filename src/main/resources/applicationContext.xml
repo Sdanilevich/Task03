@@ -3,7 +3,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id = "idNewsService" class="by.htp.catalognews.service.impl.NewsServiceImpl"/>
-    <bean id = "idCatalogNews" class="by.htp.catalognews.entity.CatalogNews"/>
-    <bean id = "idNewsDao" class="by.htp.catalognews.dao.impl.NewsDaoImpl"/>
+    <bean id = "idNewsService" class="by.htp.catalognews.service.impl.NewsServiceImpl" scope="singleton"/>
+    <bean id = "idCatalogNews" class="by.htp.catalognews.entity.CatalogNews" scope="prototype"/>
+    <bean id = "idNewsDao" class="by.htp.catalognews.dao.impl.NewsDaoImpl"  scope="singleton"/>
 </beans>
