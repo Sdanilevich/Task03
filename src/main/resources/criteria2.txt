@@ -1,0 +1,6 @@
+category
+country
+name
+newsBody
+providerName
+providerAuthors
