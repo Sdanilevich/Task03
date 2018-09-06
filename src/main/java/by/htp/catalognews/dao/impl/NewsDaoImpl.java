@@ -15,7 +15,6 @@ public class NewsDaoImpl implements NewsDao<News> {
     public List<News> find(Criteria criteria) throws IOException {
         CatalogNews catalogNews = JaxbParser.readXML(Constant.getFullPathFileXML());
 
-
         List<News> listNews = catalogNews.getList();
 
         List<News> findCatalog = new ArrayList<>();

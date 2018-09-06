@@ -6,7 +6,6 @@ import by.htp.catalognews.entity.Criteria.Criteria;
 import by.htp.catalognews.entity.News;
 import by.htp.catalognews.service.Constant;
 import by.htp.catalognews.service.NewsService;
-import by.htp.catalognews.service.ServiceFactory;
 import by.htp.catalognews.service.impl.NewsServiceImpl;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

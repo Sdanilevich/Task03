@@ -4,19 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class Criteria {
+public class Criteria<E> {
 
-    private static HashMap<String, Object> criteria = new HashMap<>();
+    private HashMap<E, Object> criteria = new HashMap<>();
 
-    public HashMap<String, Object> getCriteria() {
+    public HashMap<E, Object> getCriteria() {
         return criteria;
     }
 
-    public void setCriteria(HashMap<String, Object> criteria) {
-        Criteria.criteria = criteria;
+    public void setCriteria(HashMap<E, Object> criteria) {
+        this.criteria = criteria;
     }
 
-    public void putValue(String key, Object value){
+    public void putValue(E key, Object value){
         criteria.put(key, value);
     }
 
@@ -31,10 +31,10 @@ public class Criteria {
     public String toString() {
         String listParameter = "";
         if (criteria != null) {
-            for (Map.Entry<String, Object> entry : criteria.entrySet()) {
-                String nameCriteria = entry.getKey();
+            for (Map.Entry<E, Object> entry : criteria.entrySet()) {
+                E nameCriteria = entry.getKey();
                 String valueCriteria = (String) entry.getValue();
-                listParameter = listParameter.concat(nameCriteria) + "=" + valueCriteria+" ";
+                listParameter = listParameter.concat((String)nameCriteria) + "=" + valueCriteria+" ";
             }
         }
         return "Параметры:  " + listParameter;
