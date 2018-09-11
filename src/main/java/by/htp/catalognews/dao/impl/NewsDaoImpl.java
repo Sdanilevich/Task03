@@ -4,16 +4,17 @@ import by.htp.catalognews.dao.xml.JaxbParser;
 import by.htp.catalognews.entity.News;
 import by.htp.catalognews.dao.NewsDao;
 import by.htp.catalognews.entity.CatalogNews;
-import by.htp.catalognews.entity.Criteria.Criteria;
+import by.htp.catalognews.entity.criteria.Criteria;
 import by.htp.catalognews.service.Constant;
 import by.htp.catalognews.service.Util;
 
+import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.*;
 
 public class NewsDaoImpl implements NewsDao<News> {
-    public List<News> find(Criteria criteria) throws IOException {
-        CatalogNews catalogNews = JaxbParser.readXML(Constant.getFullPathFileXML());
+    public List<News> find(Criteria criteria) throws IOException, JAXBException {
+        CatalogNews  catalogNews = JaxbParser.readXML(Constant.getFullPathFileXML());
 
         List<News> listNews = catalogNews.getList();
 
