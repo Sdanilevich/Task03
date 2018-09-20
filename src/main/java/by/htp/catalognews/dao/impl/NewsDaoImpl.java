@@ -13,8 +13,8 @@ import java.io.IOException;
 import java.util.*;
 
 public class NewsDaoImpl implements NewsDao<News> {
-    public List<News> find(Criteria criteria) throws IOException, JAXBException {
-        CatalogNews  catalogNews = JaxbParser.readXML(Constant.getFullPathFileXML());
+    public List<News> find(Criteria criteria, String nameFile) throws IOException, JAXBException {
+        CatalogNews  catalogNews = JaxbParser.readXML(nameFile);
 
         List<News> listNews = catalogNews.getList();
 

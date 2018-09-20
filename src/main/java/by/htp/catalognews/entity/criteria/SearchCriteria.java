@@ -1,4 +1,4 @@
-package by.htp.catalognews.entity.Criteria;
+package by.htp.catalognews.entity.criteria;
 
 public final class SearchCriteria {
     public static enum CriteriaNews{

@@ -78,4 +78,52 @@
             </authors>
         </providerNews>
     </news>
+    <news category="Book">
+        <date>10.09.2018</date>
+        <country>Литва</country>
+        <name>Красная книга</name>
+        <newsBody>В красную книгу добавлен исчезающий вид гусеницы</newsBody>
+        <providerNews>
+            <name></name>
+        </providerNews>
+    </news>
+    <news category="Book">
+        <date>20.09.2018</date>
+        <country>Литва</country>
+        <name>Красная книга</name>
+        <newsBody>В красную книгу добавлен исчезающий вид гусеницы</newsBody>
+        <providerNews>
+            <name>Сообщество ученых</name>
+            <authors>
+                <author>Jim</author>
+                <author>Jon</author>
+            </authors>
+        </providerNews>
+    </news>
+    <news category="Book">
+        <date>20.09.2018</date>
+        <country>Литва</country>
+        <name>Красная книга</name>
+        <newsBody>В красную книгу добавлен исчезающий вид гусеницы</newsBody>
+        <providerNews>
+            <name>Сообщество ученых</name>
+            <authors>
+                <author>Jim</author>
+                <author>Jon</author>
+            </authors>
+        </providerNews>
+    </news>
+    <news category="Book">
+        <date>20.09.2018</date>
+        <country>Литва</country>
+        <name>Красная книга</name>
+        <newsBody>В красную книгу добавлен исчезающий вид гусеницы</newsBody>
+        <providerNews>
+            <name>Сообщество ученых</name>
+            <authors>
+                <author>Jim</author>
+                <author>Jon</author>
+            </authors>
+        </providerNews>
+    </news>
 </catalog_news>

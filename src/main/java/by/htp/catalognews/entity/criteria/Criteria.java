@@ -1,4 +1,4 @@
-package by.htp.catalognews.entity.Criteria;
+package by.htp.catalognews.entity.criteria;
 
 import java.util.HashMap;
 import java.util.Map;

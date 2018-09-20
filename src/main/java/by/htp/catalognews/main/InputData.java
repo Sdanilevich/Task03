@@ -9,10 +9,13 @@ import java.util.*;
 public class InputData {
 
     public static HashMap<String, Object> readFromConsole() throws IOException {
+
+        Constant constant = Main.getContextSpring().getBean("idConstant", Constant.class);
+
         HashMap<String, Object> listCriteria = Util.getEmptyCriteria();
         for (Map.Entry<String, Object> entry: listCriteria.entrySet()) {
             String nameCriteria = entry.getKey();
-            String pathForDataCriteria = Constant.directoryFileCriteria.concat(entry.getKey())+".txt";
+            String pathForDataCriteria = constant.getDirectoryFileCriteria().concat(entry.getKey())+".txt";
             String valueCriteria;
             if (Util.checkExistFile(pathForDataCriteria)){
                 List<String> list = Util.getInfoFromFile(pathForDataCriteria);

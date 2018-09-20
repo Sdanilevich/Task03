@@ -1,6 +1,6 @@
 package by.htp.catalognews.service.validation;
 
-import by.htp.catalognews.entity.Criteria.Criteria;
+import by.htp.catalognews.entity.criteria.Criteria;
 
 import java.util.HashMap;
 import java.util.List;

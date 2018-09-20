@@ -1,12 +1,13 @@
 package by.htp.catalognews.entity;
 
 import javax.xml.bind.annotation.*;
+import java.io.Serializable;
 import java.util.List;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "News", propOrder = { "date", "country", "name", "newsBody", "providerNews" })
-public class News {
+public class News implements Serializable {
     @XmlAttribute
     private String category;
 

@@ -1,7 +1,8 @@
 package by.htp.catalognews.service;
 
 
-import by.htp.catalognews.entity.Criteria.SearchCriteria;
+import by.htp.catalognews.entity.criteria.SearchCriteria;
+import by.htp.catalognews.main.Main;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -37,7 +38,9 @@ public class Util {
     }
 
     public static HashMap<String, Object> getEmptyCriteria() throws IOException {
-        String path = Constant.directoryFileCriteria+Constant.nameFileCriteria;
+        Constant constant = Main.getContextSpring().getBean("idConstant", Constant.class);
+
+        String path = constant.getDirectoryFileCriteria()+constant.getDirectoryFileCriteria();
         HashMap<String, Object> criteriaList = new HashMap<>();
         if (Util.checkExistFile(path)){
             List<String> listCriteria = Util.getInfoFromFile(path);

@@ -1,9 +1,51 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id = "idNewsService" class="by.htp.catalognews.service.impl.NewsServiceImpl" scope="singleton"/>
+    <context:property-placeholder location="classpath:constant.properties"/>
+
     <bean id = "idCatalogNews" class="by.htp.catalognews.entity.CatalogNews" scope="prototype"/>
     <bean id = "idNewsDao" class="by.htp.catalognews.dao.impl.NewsDaoImpl"  scope="singleton"/>
+    <bean id = "idNewsService" class="by.htp.catalognews.service.impl.NewsServiceImpl"  scope="singleton"/>
+
+    <bean id = "idConstant" class="by.htp.catalognews.service.Constant"  scope="singleton">
+        <property name="directoryFileXML" value="${directoryFileXML}" />
+        <property name="nameFileXML" value="${nameFileXML}" />
+        <property name="fullPathFileXML" value="${fullPathFileXML}" />
+        <property name="directoryFileCriteria" value="${directoryFileCriteria}" />
+        <property name="nameFileCriteria" value="${nameFileCriteria}" />
+      </bean>
+
+
+    <bean id = "idCriteriaForCreate" class="by.htp.catalognews.entity.criteria.Criteria">
+        <property name="criteria">
+            <map>
+                <entry key="providerAuthors">
+                    <list>
+                        <value>Jim</value>
+                        <value>Jon</value>
+                    </list>
+                </entry>
+                <entry key="category" value="Book"/>
+                <entry key="country" value="Литва"/>
+                <entry key="name" value="Красная книга"/>
+                <entry key="newsBody" value="В красную книгу добавлен исчезающий вид гусеницы"/>
+                <entry key="providerName" value="Сообщество ученых"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id = "idCriteriaForFind" class="by.htp.catalognews.entity.criteria.Criteria">
+        <property name="criteria">
+            <map>
+                <entry key="category" value="Book"/>
+                <entry key="country" value="Литва"/>
+            </map>
+        </property>
+    </bean>
+
 </beans>
